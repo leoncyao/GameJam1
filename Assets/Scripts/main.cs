@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class main : MonoBehaviour
 {
+    public int hp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,11 @@ public class main : MonoBehaviour
         InvokeRepeating("Spawn", 10 * time_scale, 2.5f * time_scale);
 
         //Spawn();
+
+
+        // need to give player hit points
+        hp = 3;
+
     }
 
     public GameObject bullet_prefab;
@@ -51,9 +58,6 @@ public class main : MonoBehaviour
             Debug.Log("right click");
             //spray_prefab.GetComponent<ParticleSystem>().Emit(1);
             // Do spray effect
-
-
-
 
         }
 
