@@ -5,7 +5,8 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - bullet_prefab: {instanceID: 0}
-  - ant_prefab: {instanceID: 0}
+  - ant_prefab: {fileID: 919132149155446097, guid: 2fa1e38003d243340ba492366773a687,
+      type: 3}
   - spray_prefab: {fileID: 1273915125232972, guid: 73767e07adddc394d82b994801f89bbb,
       type: 3}
   executionOrder: 0
