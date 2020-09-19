@@ -48,6 +48,7 @@ public class main : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+            // Debug.Log("right click");
             spray_prefab.GetComponent<ParticleSystem>().Emit(1);
             // Do spray effect
 
