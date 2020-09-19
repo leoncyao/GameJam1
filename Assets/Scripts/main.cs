@@ -18,7 +18,7 @@ public class main : MonoBehaviour
         InvokeRepeating("Spawn", 0, 10 * time_scale);
         InvokeRepeating("Spawn", 5 * time_scale, 5 * time_scale);
         InvokeRepeating("Spawn", 10 * time_scale, 2.5f * time_scale);
-
+        //Spawn();
         //Spawn();
 
 
@@ -49,7 +49,7 @@ public class main : MonoBehaviour
                 GameObject bullet = Instantiate(bullet_prefab);
                 bullet.GetComponent<Rigidbody>().velocity = bullet_speed * hit.point;
 
-                print(hit.transform.position);
+                //print(hit.transform.position);
             }
 
         }
