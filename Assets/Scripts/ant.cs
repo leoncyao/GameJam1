@@ -8,14 +8,14 @@ public class ant : MonoBehaviour
     public static Vector3 target = new Vector3(0, 0, 0);
     // Start is called before the first frame update
 
-
+    
     private bool has_launched;
-    private RigidBody rb;
+    private Rigidbody rb;
 
     void Start()
     {
         has_launched = false;
-        rb = GetComponent<RigidBody>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,16 +23,20 @@ public class ant : MonoBehaviour
     {
         if (transform.position != target) { 
             
-            if (transform.position > -10) {
-                rb.velocity = -transform.position;
+            if (transform.position.z < 10) {
+                if (!has_launched)
+                {
+                    rb.velocity = -transform.position;
+                    has_launched = true;
+                }
+                
             }
 
             else {
                 float step = speed * Time.deltaTime; // calculate distance to move
                 transform.position = Vector3.MoveTowards(transform.position, target, step);
             }
-                // try to animate jump sequence using rb, otherwise keep crawling
-            //launch if set rigidbody .add velocity to something
+                
         }
     }
 }

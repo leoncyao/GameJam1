@@ -23,7 +23,7 @@ public class main : MonoBehaviour
 
     public GameObject bullet_prefab;
     public GameObject ant_prefab;
-    public GameObject spray_prefab;
+    // public GameObject spray_prefab;
 
     public static float bullet_speed = 10;
     // Update is called once per frame
@@ -49,8 +49,8 @@ public class main : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-            // Debug.Log("right click");
-            spray_prefab.GetComponent<ParticleSystem>().Emit(1);
+            Debug.Log("right click");
+            //spray_prefab.GetComponent<ParticleSystem>().Emit(1);
             // Do spray effect
 
 
