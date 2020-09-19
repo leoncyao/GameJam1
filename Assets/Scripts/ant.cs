@@ -8,7 +8,7 @@ public class ant : MonoBehaviour
     public static Vector3 target = new Vector3(0, 0, 0);
     // Start is called before the first frame update
 
-
+    
     private bool has_launched;
     private Rigidbody rb;
 
