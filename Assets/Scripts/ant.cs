@@ -21,12 +21,13 @@ public class ant : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position != target) { 
-            
+        if (transform.position != target) {
+            transform.LookAt(target);
             if (transform.position.z < 10) {
                 if (!has_launched)
                 {
-                    rb.velocity = -transform.position;
+
+                    rb.velocity = 0.5f * (-transform.position + new Vector3(0,3.5f,0));
                     has_launched = true;
                 }
                 
