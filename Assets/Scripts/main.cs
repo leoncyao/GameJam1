@@ -7,7 +7,17 @@ public class main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InvokeRepeating("Spawn", spawnTime, spawnTime);
+        //for(int i = 10; i < 100; i += 10)
+        //{
+        //    InvokeRepeating("Spawn", i, i);
+        //}
+
+        float time_scale = 0.5f;
+        InvokeRepeating("Spawn", 0, 10 * time_scale);
+        InvokeRepeating("Spawn", 5 * time_scale, 5 * time_scale);
+        InvokeRepeating("Spawn", 10 * time_scale, 2.5f * time_scale);
+
+        //Spawn();
     }
 
     public GameObject bullet_prefab;
@@ -51,9 +61,9 @@ public class main : MonoBehaviour
 
     void Spawn()
     {
-        spawnPosition.x = Random.Range( 17, 17);
-        spawnPosition.y = 0.5f;
-        spawnPosition.z = Random.Range(-17, 17);
+        spawnPosition.x = Random.Range(-14, 14);
+        spawnPosition.y = -2.5f;
+        spawnPosition.z = Random.Range(18, 14);
 
         //Instantiate(objects[UnityEngine.Random.Range(0, goodie.Length - 1)], spawnPosition, Quaternion.identity);
         Instantiate(ant_prefab, spawnPosition, Quaternion.identity);
