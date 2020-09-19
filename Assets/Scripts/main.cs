@@ -20,6 +20,7 @@ public class main : MonoBehaviour
         //Spawn();
     }
 
+
     public GameObject bullet_prefab;
     public GameObject ant_prefab;
 
